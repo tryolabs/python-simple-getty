@@ -1,2 +1,2 @@
-pyhton-simple-getty
+python-simple-getty
 ===================
