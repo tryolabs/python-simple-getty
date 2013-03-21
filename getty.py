@@ -145,6 +145,9 @@ class Session:
 
     def __get_image_details(self, ids):
         self.__check_session()
+        
+        if not ids:
+            return {}
 
         request_headers = {'Token': self.__token, 'CoordinationId': None}
         request_body = {'ImageIds': ids,
@@ -182,7 +185,7 @@ class Session:
         """
         Returns a dictionary containing metadata for the specified image IDs.
 
-        ids: The ID of an image (String) or a lost of IDs ([String]).
+        ids: The ID of an image (String) or a list of IDs ([String]).
         """
         if type(ids) == str:
             ids = [ids]
