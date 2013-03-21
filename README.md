@@ -34,7 +34,7 @@ Usage
 5. Search for images. You'll have to specify the keywords to search for, how 
 many items to return, and what the index of the first item is:
 
-        s.search('Someone', 50, 1)
+        s.search('Someone', items=50, from_item=1)
 
 6. You can use the `get_image_details` to get some metadata for the search 
 results you got. You can call it with just one ID as a `String` or give it 
