@@ -52,14 +52,14 @@ class Session:
         payload = {'RequestHeader': request_headers,
                    'CreateSessionRequestBody': request_body}
 
-        r = post('%s%s' + (self.__SGETTY_BASE, self.__CREATE_SESSION),
+        r = post('%s%s' % (self.__SGETTY_BASE, self.__CREATE_SESSION),
                  json.dumps(payload),
                  headers=self.__JSON_HEADER)
 
         if r.status_code != 200:
             raise Exception()
 
-        r = r.json
+        r = r.json()
         if r['ResponseHeader']['Status'] != 'success':
             raise Exception(r['ResponseHeader'])
 
@@ -82,7 +82,7 @@ class Session:
         if r.status_code != 200:
             raise Exception("Got status code: %d" % r.status_code)
 
-        r = r.json
+        r = r.json()
         if r['ResponseHeader']['Status'] != 'success':
             raise Exception(r['ResponseHeader'])
 
@@ -128,7 +128,7 @@ class Session:
         if r.status_code != 200:
             raise Exception("Got status code: %d" % r.status_code)
 
-        r = r.json
+        r = r.json()
         if r['ResponseHeader']['Status'] != 'success':
             raise Exception(r['ResponseHeader'])
 
@@ -160,7 +160,7 @@ class Session:
         if r.status_code != 200:
             raise Exception("Got status code: %d" % r.status_code)
 
-        r = r.json
+        r = r.json()
         if r['ResponseHeader']['Status'] != 'success':
             raise Exception(r['ResponseHeader'])
 
@@ -240,7 +240,7 @@ class Session:
         if r.status_code != 200:
             raise Exception("Got status code: %d" % r.status_code)
 
-        r = r.json
+        r = r.json()
         if r['ResponseHeader']['Status'] != 'success':
             raise Exception(r['ResponseHeader'])
 
@@ -264,7 +264,7 @@ class Session:
         if r.status_code != 200:
             raise Exception("Got status code: %d" % r.status_code)
 
-        r = r.json
+        r = r.json()
         if r['ResponseHeader']['Status'] != 'success':
             raise Exception(r['ResponseHeader'])
 
