@@ -63,13 +63,11 @@ If you feel this wrapper is too simple for what you need, Getty's API
 documentation can be found [here](https://github.com/gettyimages/connect).
 
 More information
-================
+----------------
 
-:Date: 03-21-2013
-:Version: 0.1
-:Authors:
+* Date: 03-21-2013
+* Version: 0.1
+* Authors:
   - Mauro de Carvalho - Tryolabs <mauro@tryolabs.com>
   - Alejandro Martínez - Tryolabs <alejandro@tryolabs.com>
-
-:Website:
-  https://github.com/tryolabs/python-simple-getty
+* Website: https://github.com/tryolabs/python-simple-getty
