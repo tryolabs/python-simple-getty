@@ -77,7 +77,7 @@ class Session:
 
         r = post('%s%s' % (self.__SGETTY_BASE, self.__RENEW_SESSION),
              json.dumps(payload),
-             headers={self.__JSON_HEADER})
+             headers=self.__JSON_HEADER)
 
         if r.status_code != 200:
             raise Exception("Got status code: %d" % r.status_code)
