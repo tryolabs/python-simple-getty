@@ -40,7 +40,7 @@ many items to return, and what the index of the first item is:
 results you got. You can call it with just one ID as a `String` or give it 
 multiple IDs in a list:
 
-        s.get_image_details([one_id, another_id])
+        s.get_image_details([one_id, another_id, ...])
 
 7. Finally you can buy an image specifying it's ID and a optionaly a preferred 
 size in bytes of the image to buy:
